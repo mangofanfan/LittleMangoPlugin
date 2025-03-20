@@ -61,7 +61,7 @@ class MyPlugin(BasePlugin):
     async def commonHandler(self, ctx: EventContext):
         msg = ctx.event.text_message  # 这里的 event 即为 PersonNormalMessageReceived / GroupNormalMessageReceived 的对象
 
-        if msg.startswith("小芒果"):
+        if msg == "小芒果":
             ctx.add_return("reply", [HELLO])
 
         if msg.startswith("小芒果 "):
